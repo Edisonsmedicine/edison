@@ -32,6 +32,7 @@ else {
 }
 }
 function mouseClicked() {
+	fullscreen()
   if(title==true){
     if(mouseX > 100 && mouseX < 850 && mouseY > 1165 ){
        title = false
