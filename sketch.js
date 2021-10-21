@@ -18,7 +18,7 @@ arrow = loadImage('assets/arrow.png')
 
 
 function setup(){
-createCanvas(960, 1750);
+createCanvas(windowWidth,windowHeight);
 
 }
 function draw(){
