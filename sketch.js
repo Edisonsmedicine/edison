@@ -18,8 +18,8 @@ arrow = loadImage('assets/arrow.png')
 
 
 function setup(){
-createCanvas(windowWidth,windowHeight);
-
+createCanvas(960,1750);
+//960 x 1750
 }
 function draw(){
 background(255,255,255);
@@ -32,7 +32,8 @@ else {
 }
 }
 function mouseClicked() {
-	fullscreen()
+  let fs = fullscreen();
+  fullscreen(!fs);
   if(title==true){
     if(mouseX > 100 && mouseX < 850 && mouseY > 1165 ){
        title = false
