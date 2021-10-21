@@ -3,24 +3,24 @@ function playscreen(){
 
 
 fill(0,0,0)
-rect(0,1100,960,700)
+rect(sFixX(0),sFixX(1100),sFixY(960),sFixY(700))
 
 fill(0,0,0)
-rect(700,1500, 350,300)
+rect(sFixX(700),sFixX(1500), sFixY(350),sFixY(300))
 
-image(arrow, 670,1450)
+image(arrow, sFixX(670),sFixY(1450))
 
 fill(0,0,0)
-rect(0,0,400,200)
+rect(sFixX(0),sFixX(0),sFixY(400),sFixY(200))
 
 fill(200,0,0)
-rect(700,0,800,200)
+rect(sFixX(700),sFixX(0),sFixY(800),sFixY(200))
 
 
 
 textSize(50)
 fill(255,255,255)
-text(dialogue[dialogueNumber],30,1165)
+text(dialogue[dialogueNumber],sFixX(30),sFixY(1165))
 
 }
 

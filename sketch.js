@@ -18,13 +18,14 @@ arrow = loadImage('assets/arrow.png')
 
 
 function setup(){
-createCanvas(960,1750);
+createCanvas(windowWidth,windowHeight);
 //960 x 1750
 }
 function draw(){
 background(255,255,255);
 
 if(title == true){
+
   titlescreen()
 }
 else {
@@ -32,17 +33,24 @@ else {
 }
 }
 function mouseClicked() {
-  let fs = fullscreen();
-  fullscreen(!fs);
   if(title==true){
-    if(mouseX > 100 && mouseX < 850 && mouseY > 1165 ){
+    if(mouseX > sFixX(100) && mouseX < sFixX(850) && mouseY > sFixY(1165) ){
        title = false
     }
   }
   else {
-    if(mouseX > 700 && mouseX < 1000 && mouseY > 1500 && mouseY < 1750 ){
+    if(mouseX > sFixX(700) && mouseX < sFixX(1000) && mouseY > sFixY(1500) && mouseY < sFixY(1750) ){
        dialogueNumber++;
     }
 
   }
+}
+
+function sFixX(number){
+  let l = number/960*windowWidth;
+  return l
+}
+function sFixY(number){
+  let l = number/1750*windowHeight;
+  return l
 }

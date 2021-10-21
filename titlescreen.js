@@ -1,12 +1,12 @@
 function titlescreen(){
   fill(0,0,0)
-  rect(0,1100,960,700)
+  rect(sFixX(0),sFixX(1100),sFixY(960),sFixY(700))
 
   fill(0,0,0)
-  rect(100,100,750,200)
-  image(babygame, 100,100)
+  rect(sFixX(100),sFixX(100),sFixY(750),sFixY(200))
+  image(babygame, sFixX(100),sFixY(100))
 
-  if(mouseX > 100 && mouseX < 850 && mouseY > 1165 ){
+  if(mouseX >sFixX(100) && mouseX < sFixX(850) && mouseY > sFixY(1165) ){
      fill(100,30,70)
   }
   else {
@@ -14,13 +14,10 @@ function titlescreen(){
   }
 
 
-  rect(100,1165,750,500)
-  image(playbutton, 100,1165)
+  rect(sFixX(100),sFixX(1165),sFixY(750),sFixY(500))
+  image(playbutton, sFixX(100),sFixY(1165))
 
-image(bottles,-20,500)
+  image(bottles,sFixX(-20),sFixY(500))
 
-  image(babysprite, 250,500)
-
-
-
+  image(babysprite, sFixX(250),sFixY(500))
 }
